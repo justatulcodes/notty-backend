@@ -15,10 +15,15 @@ connectMongoDb("mongodb://127.0.0.1:27017/notty")
 app.set('view engine', 'ejs')
 app.set('views', path.resolve("./views"))
 
+
 //Middleware or you can say a plugin to get body data for POST APIs
 app.use(
     express.urlencoded({ urlencoded: false })
 )
+const cors = require('cors');
+app.use(cors({
+  origin: 'http://localhost:5173' // your Vite dev server
+}));
 app.use(express.json()); 
 
 app.use('/user', userRoute)
