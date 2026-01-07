@@ -22,7 +22,7 @@ app.use(
 )
 const cors = require('cors');
 app.use(cors({
-  origin: 'http://localhost:5173' // your Vite dev server
+  origin: 'http://localhost:5174' // your Vite dev server
 }));
 app.use(express.json()); 
 
