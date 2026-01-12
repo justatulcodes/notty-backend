@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 
 async function connectMongoDb(url) {
-    return mongoose.connect(url)
+    return mongoose.connect("mongodb+srv://atul:vlh5j1J1Do1jV2wO@playgroundcluster.m9dwgal.mongodb.net/?appName=PlaygroundCluster")
     .then(() => {
         console.log("MongoDB Connection success!")
     })
